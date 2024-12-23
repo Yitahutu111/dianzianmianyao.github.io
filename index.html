@@ -91,433 +91,496 @@
         background-color: #f0f0f0;
         margin: 10px;
       }
+      #cover-video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        background-color: #000; /* 设置容器背景颜色为黑色 */
+      }
+      #cover-video {
+        max-width: 100%;
+        max-height: 100%;
+        cursor: pointer;
+        z-index: 100000;
+      }
+      #content {
+        position: absolute;
+        top: -100000px; /* 将内容移出视口 */
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     </style>
   </head>
   <body>
-    <section>
-      <div class="container" style="height: 650px">
-        <img
-          src="./assets1/0/1.png"
-          class="img"
-          style="right: 0; top: 0; width: 681px"
-        />
-        <img
-          src="./assets1/0/2.png"
-          class="img"
-          style="top: 180px; left: 30px; width: 550px"
-        />
-        <img
-          src="./assets1/0/3.png"
-          class="img"
-          style="top: 300px; left: 130px; width: 547px"
-        />
-      </div>
-    </section>
-    <section>
-      <div class="container" style="height: 500px">
-        <img
-          src="./assets1/1/1.png"
-          class="img"
-          style="right: 50px; top: 0; width: 218px"
-        />
-        <img
-          src="./assets1/1/2.png"
-          class="img"
-          style="left: 30px; top: 20px; width: 365px"
-        />
-        <img
-          src="./assets1/1/3.png"
-          class="img"
-          style="left: 30px; top: 300px; width: 420px"
-        />
-        <img
-          src="./assets1/1/4.png"
-          class="img"
-          style="right: 50px; top: 350px; width: 174px"
-        />
-        <img
-          src="./assets1/1/5.png"
-          class="img center"
-          style="top: 100px; width: 843px"
-        />
-      </div>
-    </section>
-    <section>
-      <div class="container" style="height: 1180px">
-        <img
-          src="./assets1/2-3/4.png"
-          class="img center"
-          style="width: 1062px; top: 950px"
-        />
-        <img
-          src="./assets1/2-3/1.png"
-          class="img"
-          style="width: 1080px; top: 0; left: 0"
-        />
-        <img
-          src="./assets1/2-3/2.png"
-          class="img"
-          style="width: 576px; top: 640px; left: 80px"
-        />
-        <img
-          src="./assets1/2-3/3.png"
-          class="img"
-          style="width: 456px; top: 660px; right: 20px"
-        />
-        <img
-          src="./assets1/2-3/5.png"
-          class="img"
-          style="width: 218px; top: 1160px; left: 0"
-        />
-      </div>
-    </section>
-    <section>
-      <div class="container" style="height: 680px">
-        <img
-          src="./assets1/5/0.png"
-          class="img center"
-          style="width: 922px; top: 100px"
-        />
-      </div>
-    </section>
-    <section class="bg1">
-      <div class="container" style="height: 650px">
-        <img
-          src="./assets1/5/2.png"
-          class="img"
-          style="width: 704px; right: 45px; top: 50px"
-          data-aos="fade-left"
-        />
-        <img
-          src="./assets1/5/1.png"
-          class="img"
-          style="width: 885px; left: 20px; top: 50px"
-          data-aos="fade-right"
-        />
-        <img
-          src="./assets1/5/3.png"
-          class="img"
-          style="width: 354px; left: 0; top: 50px"
-          data-aos="fade-right"
-        />
-        <img
-          src="./assets1/5/4.png"
-          class="img"
-          style="width: 207px; right: 20px; top: 530px"
-          data-aos="fade-right"
-        />
-      </div>
-    </section>
-    <section class="bg2">
-      <div class="container" style="height: 650px">
-        <div id="echarts" style="height: 600px"></div>
-        <img
-          src="./assets1/6/1.png"
-          class="img"
-          style="width: 200px; right: 0; bottom: 0"
-        />
-      </div>
-    </section>
-    <section class="bg3">
-      <div class="container" style="height: 600px">
-        <img
-          src="./assets1/7/1.png"
-          alt="how"
-          class="img"
-          style="width: 1080px; top: 100px"
-        />
-        <img
-          src="./assets1/7/2.png"
-          class="img"
-          style="width: 852px; right: 0; top: 100px"
-          data-aos="fade-left"
-        />
-        <img
-          src="./assets1/7/3.png"
-          class="img center"
-          style="width: 945px; top: 240px"
-        />
-        <img
-          src="./assets1/7/4.png"
-          class="img"
-          style="width: 301px; top: 430px; left: 400px"
-          data-aos="fade-left"
-        />
-      </div>
-    </section>
-    <section class="bg4">
-      <div class="container" style="height: 700px">
-        <img
-          src="./assets1/8/1.png"
-          class="img"
-          style="width: 730px; left: 100px; top: 100px"
-          data-aos="fade-right"
-        />
-        <img
-          src="./assets1/8/2.png"
-          alt="入睡"
-          class="img"
-          style="width: 542px; left: 0px; top: 200px"
-          data-aos="fade-left"
-        />
-        <div
-          style="width: 400px; position: absolute; right: 50px; top: 200px"
-          class="flourish-embed flourish-bubble-chart"
-          data-src="visualisation/20792632"
-        >
-          <script src="https://public.flourish.studio/resources/embed.js"></script>
+    <div id="cover-video-container">
+      <video id="cover-video" autoplay loop muted onclick="showContent()">
+        <source src="./assets1/clock.mp4" type="video/mp4" />
+        你的浏览器不支持 HTML5 视频。
+      </video>
+    </div>
+    <div>
+      <section>
+        <div class="container" style="height: 650px">
+          <img
+            src="./assets1/0/1.png"
+            class="img"
+            style="right: 0; top: 0; width: 681px"
+          />
+          <img
+            src="./assets1/0/2.png"
+            class="img"
+            style="top: 180px; left: 30px; width: 550px"
+          />
+          <img
+            src="./assets1/0/3.png"
+            class="img"
+            style="top: 300px; left: 130px; width: 547px"
+          />
         </div>
-      </div>
-    </section>
-    <section class="bg5">
-      <div class="container" style="height: 380px">
-        <img
-          src="./assets1/9-10/1.png"
-          class="img center"
-          style="width: 876px; top: 50px"
-        />
-        <img
-          src="./assets1/9-10/2.png"
-          class="img center"
-          style="width: 900px; top: 150px"
-        />
-      </div>
-    </section>
-    <section class="bg6">
-      <div class="container" style="height: 950px">
-        <img
-          src="./assets1/9-10/3.png"
-          class="img center"
-          style="width: 966px; top: 0px"
-        />
-        <img
-          src="./assets1/9-10/4.png"
-          class="img center"
-          style="width: 839px; top: 680px"
-        />
-      </div>
-    </section>
-    <section class="bg7">
-      <div class="container" style="height: 500px">
-        <img
-          src="./assets1/11/1.png"
-          class="img"
-          style="width: 537px; top: 0px"
-          data-aos="fade-right"
-        />
-        <img
-          src="./assets1/11/2.png"
-          class="img"
-          style="width: 523px; top: 100px; right: 0px"
-          data-aos="fade-left"
-        />
-      </div>
-    </section>
-    <section class="bg8">
-      <div class="container" style="height: 620px">
-        <img
-          src="./assets1/12/1.png"
-          class="img"
-          style="width: 1006px; top: 0px; left: 0px"
-          data-aos="fade-right"
-        />
-        <img
-          src="./assets1/12/2.png"
-          class="img"
-          style="width: 462px; top: 100px; left: 20px"
-          data-aos="fade-right"
-        />
-        <img
-          src="./assets1/12/3.png"
-          class="img"
-          style="width: 423px; right: 50px; top: 100px"
-          data-aos="fade-left"
-        />
-        <img
-          src="./assets1/12/4.png"
-          class="img"
-          style="width: 302px; right: 10px; bottom: 0"
-          data-aos="fade-left"
-        />
-      </div>
-    </section>
-    <section class="bg9">
-      <div class="container" style="height: 600px">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./assets1/13/1.png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets1/13/2.png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets1/13/3.png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets1/13/4.png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets1/13/5.png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets1/13/6.png" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets1/13/7.png" />
-            </div>
+      </section>
+      <section>
+        <div class="container" style="height: 500px">
+          <img
+            src="./assets1/1/1.png"
+            class="img"
+            style="right: 50px; top: 0; width: 218px"
+          />
+          <img
+            src="./assets1/1/2.png"
+            class="img"
+            style="left: 30px; top: 20px; width: 365px"
+          />
+          <img
+            src="./assets1/1/3.png"
+            class="img"
+            style="left: 30px; top: 300px; width: 420px"
+          />
+          <img
+            src="./assets1/1/4.png"
+            class="img"
+            style="right: 50px; top: 350px; width: 174px"
+          />
+          <img
+            src="./assets1/1/5.png"
+            class="img center"
+            style="top: 100px; width: 843px"
+          />
+        </div>
+      </section>
+      <section>
+        <div class="container" style="height: 1180px">
+          <img
+            src="./assets1/2-3/4.png"
+            class="img center"
+            style="width: 1062px; top: 950px"
+          />
+          <img
+            src="./assets1/2-3/1.png"
+            class="img"
+            style="width: 1080px; top: 0; left: 0"
+          />
+          <img
+            src="./assets1/2-3/2.png"
+            class="img"
+            style="width: 576px; top: 640px; left: 80px"
+          />
+          <img
+            src="./assets1/2-3/3.png"
+            class="img"
+            style="width: 456px; top: 660px; right: 20px"
+          />
+          <img
+            src="./assets1/2-3/5.png"
+            class="img"
+            style="width: 218px; top: 1160px; left: 0"
+          />
+        </div>
+      </section>
+      <section>
+        <div class="container" style="height: 680px">
+          <img
+            src="./assets1/5/0.png"
+            class="img center"
+            style="width: 922px; top: 100px"
+          />
+        </div>
+      </section>
+      <section class="bg1">
+        <div class="container" style="height: 650px">
+          <img
+            src="./assets1/5/2.png"
+            class="img"
+            style="width: 704px; right: 45px; top: 50px"
+            data-aos="fade-left"
+          />
+          <img
+            src="./assets1/5/1.png"
+            class="img"
+            style="width: 885px; left: 20px; top: 50px"
+            data-aos="fade-right"
+          />
+          <img
+            src="./assets1/5/3.png"
+            class="img"
+            style="width: 354px; left: 0; top: 50px"
+            data-aos="fade-right"
+          />
+          <img
+            src="./assets1/5/4.png"
+            class="img"
+            style="width: 207px; right: 20px; top: 530px"
+            data-aos="fade-right"
+          />
+        </div>
+      </section>
+      <section class="bg2">
+        <div class="container" style="height: 650px">
+          <div id="echarts" style="height: 600px"></div>
+          <img
+            src="./assets1/6/1.png"
+            class="img"
+            style="width: 200px; right: 0; bottom: 0"
+          />
+        </div>
+      </section>
+      <section class="bg3">
+        <div class="container" style="height: 600px">
+          <img
+            src="./assets1/7/1.png"
+            alt="how"
+            class="img"
+            style="width: 1080px; top: 100px"
+          />
+          <img
+            src="./assets1/7/2.png"
+            class="img"
+            style="width: 852px; right: 0; top: 100px"
+            data-aos="fade-left"
+          />
+          <img
+            src="./assets1/7/3.png"
+            class="img center"
+            style="width: 945px; top: 240px"
+          />
+          <img
+            src="./assets1/7/4.png"
+            class="img"
+            style="width: 301px; top: 430px; left: 400px"
+            data-aos="fade-left"
+          />
+        </div>
+      </section>
+      <section class="bg4">
+        <div class="container" style="height: 700px">
+          <img
+            src="./assets1/8/1.png"
+            class="img"
+            style="width: 730px; left: 100px; top: 100px"
+            data-aos="fade-right"
+          />
+          <img
+            src="./assets1/8/2.png"
+            alt="入睡"
+            class="img"
+            style="width: 542px; left: 0px; top: 200px"
+            data-aos="fade-left"
+          />
+          <div
+            style="width: 400px; position: absolute; right: 50px; top: 200px"
+            class="flourish-embed flourish-bubble-chart"
+            data-src="visualisation/20792632"
+          >
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
           </div>
         </div>
-        <audio id="audioPlayer" controls style="display: none"></audio>
-        <img
-          src="./assets1/13/tips.png"
-          class="img"
-          style="width: 152px; top: 500px; left: 110px"
-        />
-        <img
-          id="dynamic-img"
-          src="./assets1/13/1text.png"
-          class="img"
-          style="width: 407px; top: 50px; right: 140px"
-        />
-        <img
-          src="./assets1/13/line.png"
-          class="img"
-          style="width: 365px; left: 230px; top: 180px; z-index: 1"
-        />
-      </div>
-    </section>
-    <section class="bg10">
-      <div class="container" style="height: 850px">
-        <img
-          src="./assets1/14/1.png"
-          class="img center"
-          style="width: 924px; top: 0"
-        />
-        <img
-          src="./assets1/14/2.png"
-          class="img center"
-          style="width: 880px; top: 80px"
-        />
-        <img
-          src="./assets1/14/3.png"
-          class="img center"
-          style="width: 1015px; top: 150px"
-        />
-      </div>
-    </section>
-    <section class="bg11">
-      <div class="container" style="height: 1400px">
-        <img
-          src="./assets1/15/1.png"
-          class="img center"
-          style="width: 807px; top: 30px"
-        />
-        <img
-          src="./assets1/15/2.png"
-          class="img center"
-          style="width: 873px; top: 100px"
-        />
-        <img
-          src="./assets1/15/3.png"
-          class="img center"
-          style="width: 270px; top: 320px"
-        />
-        <img
-          src="./assets1/15/4.png"
-          class="img center"
-          style="width: 1003px; top: 360px"
-        />
-        <img
-          src="./assets1/15/5.png"
-          class="img center"
-          style="width: 762px; top: 920px"
-        />
-      </div>
-    </section>
-    <section class="bg12">
-      <div class="container" style="height: 900px">
-        <img
-          src="./assets1/16/1.png"
-          class="img"
-          style="width: 572px; top: 30px; left: 20px"
-          data-aos="fade-right"
-        />
-        <img
-          src="./assets1/16/2.png"
-          class="img"
-          style="width: 618px; top: 100px; right: 20px"
-          data-aos="fade-left"
-        />
-        <img
-          id="sheep1"
-          src="./assets1/16/s1.png"
-          class="img center"
-          style="width: 228px; top: 300px; left: 120px; cursor: pointer"
-        />
-        <img
-          id="sheep2"
-          src="./assets1/16/s2.png"
-          class="img center"
-          style="width: 228px; top: 220px; left: 500px; cursor: pointer"
-        />
-        <img
-          id="sheep3"
-          src="./assets1/16/s3.png"
-          class="img center"
-          style="width: 228px; top: 320px; left: 900px; cursor: pointer"
-        />
-        <img
-          id="sheep-text"
-          src="./assets1/16/3.png"
-          class="img center"
-          style="width: 900px; top: 540px"
-        />
-      </div>
-    </section>
-    <section class="bg13">
-      <div class="container" style="height: 1300px">
-        <img
-          src="./assets1/17/1.png"
-          class="img center"
-          style="width: 1071px; top: 160px"
-        />
-        <img
-          src="./assets1/17/2.png"
-          class="img center"
-          style="width: 936px; top: 60px"
-        />
-        <img
-          src="./assets1/17/3.png"
-          class="img center"
-          style="width: 888px; top: 160px"
-        />
-        <img
-          src="./assets1/17/4.png"
-          class="img"
-          data-aos="flip-right"
-          style="width: 499px; top: 580px; left: 130px"
-        />
-        <img
-          src="./assets1/17/5.png"
-          class="img"
-          data-aos="flip-left"
-          style="width: 653px; top: 760px; left: 360px"
-        />
-        <img
-          src="./assets1/17/6.png"
-          class="img"
-          data-aos="zoom-in"
-          style="width: 493px; top: 1080px; left: 550px"
-        />
-        <img
-          src="./assets1/17/7.png"
-          class="img"
-          data-aos="zoom-in"
-          style="width: 334px; top: 1120px; left: 550px"
-        />
-      </div>
-    </section>
+      </section>
+      <section class="bg5">
+        <div class="container" style="height: 380px">
+          <img
+            src="./assets1/9-10/1.png"
+            class="img center"
+            style="width: 876px; top: 50px"
+          />
+          <img
+            src="./assets1/9-10/2.png"
+            class="img center"
+            style="width: 900px; top: 150px"
+          />
+        </div>
+      </section>
+      <section class="bg6">
+        <div class="container" style="height: 950px">
+          <img
+            src="./assets1/9-10/3.png"
+            class="img center"
+            style="width: 966px; top: 0px"
+          />
+          <img
+            src="./assets1/9-10/4.png"
+            class="img center"
+            style="width: 839px; top: 680px"
+          />
+        </div>
+      </section>
+      <section class="bg7">
+        <div class="container" style="height: 500px">
+          <img
+            src="./assets1/11/1.png"
+            class="img"
+            style="width: 537px; top: 0px"
+            data-aos="fade-right"
+          />
+          <img
+            src="./assets1/11/2.png"
+            class="img"
+            style="width: 523px; top: 100px; right: 0px"
+            data-aos="fade-left"
+          />
+        </div>
+      </section>
+      <section class="bg8">
+        <div class="container" style="height: 620px">
+          <img
+            src="./assets1/12/1.png"
+            class="img"
+            style="width: 1006px; top: 0px; left: 0px"
+            data-aos="fade-right"
+          />
+          <img
+            src="./assets1/12/2.png"
+            class="img"
+            style="width: 462px; top: 100px; left: 20px"
+            data-aos="fade-right"
+          />
+          <img
+            src="./assets1/12/3.png"
+            class="img"
+            style="width: 423px; right: 50px; top: 100px"
+            data-aos="fade-left"
+          />
+          <img
+            src="./assets1/12/4.png"
+            class="img"
+            style="width: 302px; right: 10px; bottom: 0"
+            data-aos="fade-left"
+          />
+        </div>
+      </section>
+      <section class="bg9">
+        <div class="container" style="height: 600px">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets1/13/1.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets1/13/2.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets1/13/3.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets1/13/4.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets1/13/5.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets1/13/6.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets1/13/7.png" />
+              </div>
+            </div>
+          </div>
+          <audio id="audioPlayer" controls style="display: none"></audio>
+          <img
+            src="./assets1/13/tips.png"
+            class="img"
+            style="width: 152px; top: 500px; left: 110px"
+          />
+          <img
+            id="dynamic-img"
+            src="./assets1/13/1text.png"
+            class="img"
+            style="width: 407px; top: 50px; right: 140px"
+          />
+          <img
+            src="./assets1/13/line.png"
+            class="img"
+            style="width: 365px; left: 230px; top: 180px; z-index: 1"
+          />
+        </div>
+      </section>
+      <section class="bg10">
+        <div class="container" style="height: 1450px">
+          <img
+            src="./assets1/14/1.png"
+            class="img center"
+            style="width: 924px; top: 0"
+          />
+          <img
+            src="./assets1/14/2.png"
+            class="img center"
+            style="width: 880px; top: 80px"
+          />
+          <img
+            src="./assets1/14/3.png"
+            class="img center"
+            style="width: 1015px; top: 150px"
+          />
+          <img
+            src="./assets1/14/t1.png"
+            class="img"
+            style="width: 526px; top: 800px; right: 0px"
+            data-aos="fade-left"
+          />
+          <img
+            src="./assets1/14/t2.png"
+            class="img"
+            style="width: 293px; top: 900px; left: 0"
+            data-aos="fade-right"
+          />
+          <img
+            src="./assets1/14/t3.png"
+            class="img"
+            style="width: 822px; top: 1000px; right: 0"
+            data-aos="fade-left"
+          />
+          <img
+            src="./assets1/14/t4.png"
+            class="img"
+            style="width: 822px; top: 1200px; left: 0"
+            data-aos="fade-right"
+          />
+        </div>
+      </section>
+      <section class="bg11">
+        <div class="container" style="height: 1400px">
+          <img
+            src="./assets1/15/1.png"
+            class="img center"
+            style="width: 807px; top: 30px"
+          />
+          <img
+            src="./assets1/15/2.png"
+            class="img center"
+            style="width: 873px; top: 100px"
+          />
+          <img
+            src="./assets1/15/3.png"
+            class="img center"
+            style="width: 270px; top: 320px"
+          />
+          <img
+            src="./assets1/15/4.png"
+            class="img center"
+            style="width: 1003px; top: 360px"
+          />
+          <img
+            src="./assets1/15/5.png"
+            class="img center"
+            style="width: 762px; top: 920px"
+          />
+        </div>
+      </section>
+      <section class="bg12">
+        <div class="container" style="height: 900px">
+          <img
+            src="./assets1/16/1.png"
+            class="img"
+            style="width: 572px; top: 30px; left: 20px"
+            data-aos="fade-right"
+          />
+          <img
+            src="./assets1/16/2.png"
+            class="img"
+            style="width: 618px; top: 100px; right: 20px"
+            data-aos="fade-left"
+          />
+          <img
+            id="sheep1"
+            src="./assets1/16/s1.png"
+            class="img center"
+            style="width: 228px; top: 300px; left: 120px; cursor: pointer"
+          />
+          <img
+            id="sheep2"
+            src="./assets1/16/s2.png"
+            class="img center"
+            style="width: 228px; top: 220px; left: 500px; cursor: pointer"
+          />
+          <img
+            id="sheep3"
+            src="./assets1/16/s3.png"
+            class="img center"
+            style="width: 228px; top: 320px; left: 900px; cursor: pointer"
+          />
+          <img
+            id="sheep-text"
+            src="./assets1/16/3.png"
+            class="img center"
+            style="width: 900px; top: 540px"
+          />
+          <img
+            id="sheep-text"
+            src="./assets1/16/tips.png"
+            class="img"
+            style="width: 330px; top: 880px; right: 0"
+          />
+        </div>
+      </section>
+      <section class="bg13">
+        <div class="container" style="height: 1300px">
+          <img
+            src="./assets1/17/1.png"
+            class="img center"
+            style="width: 1071px; top: 160px"
+          />
+          <img
+            src="./assets1/17/2.png"
+            class="img center"
+            style="width: 936px; top: 60px"
+          />
+          <img
+            src="./assets1/17/3.png"
+            class="img center"
+            style="width: 888px; top: 160px"
+          />
+          <img
+            src="./assets1/17/4.png"
+            class="img"
+            data-aos="flip-right"
+            style="width: 499px; top: 580px; left: 130px"
+          />
+          <img
+            src="./assets1/17/5.png"
+            class="img"
+            data-aos="flip-left"
+            style="width: 653px; top: 760px; left: 360px"
+          />
+          <img
+            src="./assets1/17/6.png"
+            class="img"
+            data-aos="zoom-in"
+            style="width: 493px; top: 1080px; left: 550px"
+          />
+          <img
+            src="./assets1/17/7.png"
+            class="img"
+            data-aos="zoom-in"
+            style="width: 334px; top: 1120px; left: 550px"
+          />
+        </div>
+      </section>
+    </div>
     <!-- 引入AOS的JS文件 -->
     <script src="./lib/aos/aos.js"></script>
     <script
@@ -529,7 +592,7 @@
     </script>
     <script type="text/javascript">
       var dom = document.getElementById("echarts");
-      var myChart = echarts.init(dom, "black", {
+      var myChart = echarts.init(dom, null, {
         renderer: "canvas",
         useDirtyRect: false,
       });
@@ -539,36 +602,146 @@
 
       const data = [
         // 主因分类
-        { id: "生物钟紊乱", name: "生物钟紊乱", symbolSize: 50 },
-        { id: "大脑皮层过度兴奋", name: "大脑皮层过度兴奋", symbolSize: 50 },
-        { id: "心理因素", name: "心理因素", symbolSize: 40 },
-        { id: "不良睡眠习惯", name: "不良睡眠习惯", symbolSize: 40 },
-        { id: "腺苷作用被阻断", name: "腺苷作用被阻断", symbolSize: 50 },
+        {
+          id: "生物钟紊乱",
+          name: "生物钟紊乱",
+          symbolSize: 50,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "大脑皮层过度兴奋",
+          name: "大脑皮层过度兴奋",
+          symbolSize: 50,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "心理因素",
+          name: "心理因素",
+          symbolSize: 40,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "不良睡眠习惯",
+          name: "不良睡眠习惯",
+          symbolSize: 40,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "腺苷作用被阻断",
+          name: "腺苷作用被阻断",
+          symbolSize: 50,
+          itemStyle: { color: "#95bed7" },
+        },
 
         // 生物钟紊乱的子节点
-        { id: "习惯性熬夜", name: "习惯性熬夜", symbolSize: 30 },
-        { id: "工作时的日夜倒班", name: "工作时的日夜倒班", symbolSize: 30 },
-        { id: "频繁出差", name: "频繁出差", symbolSize: 30 },
+        {
+          id: "习惯性熬夜",
+          name: "习惯性熬夜",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "工作时的日夜倒班",
+          name: "工作时的日夜倒班",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "频繁出差",
+          name: "频繁出差",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
 
         // 心理因素的子节点
-        { id: "焦虑烦躁", name: "焦虑烦躁", symbolSize: 30 },
-        { id: "挫折沮丧", name: "挫折沮丧", symbolSize: 30 },
-        { id: "孤单", name: "孤单", symbolSize: 30 },
-        { id: "感情不顺", name: "感情不顺", symbolSize: 30 },
-        { id: "担心忧虑", name: "担心忧虑", symbolSize: 30 },
+        {
+          id: "焦虑烦躁",
+          name: "焦虑烦躁",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "挫折沮丧",
+          name: "挫折沮丧",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "孤单",
+          name: "孤单",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "感情不顺",
+          name: "感情不顺",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "担心忧虑",
+          name: "担心忧虑",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
 
         // 不良睡眠习惯的子节点
-        { id: "睡前饱餐", name: "睡前饱餐", symbolSize: 30 },
-        { id: "生气发怒", name: "生气发怒", symbolSize: 30 },
-        { id: "剧烈运动", name: "剧烈运动", symbolSize: 30 },
+        {
+          id: "睡前饱餐",
+          name: "睡前饱餐",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "生气发怒",
+          name: "生气发怒",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "剧烈运动",
+          name: "剧烈运动",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
 
         // 腺苷作用被阻断的子节点
-        { id: "睡前喝咖啡因饮料", name: "睡前喝咖啡因饮料", symbolSize: 30 },
-        { id: "自身疾病", name: "自身疾病", symbolSize: 30 },
-        { id: "睡眠环境噪音", name: "睡眠环境噪音", symbolSize: 30 },
-        { id: "光线问题", name: "光线问题", symbolSize: 30 },
-        { id: "温度问题", name: "温度问题", symbolSize: 30 },
-        { id: "床的舒适程度", name: "床的舒适程度", symbolSize: 30 },
+        {
+          id: "睡前喝咖啡因饮料",
+          name: "睡前喝咖啡因饮料",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "自身疾病",
+          name: "自身疾病",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "睡眠环境噪音",
+          name: "睡眠环境噪音",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "光线问题",
+          name: "光线问题",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "温度问题",
+          name: "温度问题",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
+        {
+          id: "床的舒适程度",
+          name: "床的舒适程度",
+          symbolSize: 30,
+          itemStyle: { color: "#95bed7" },
+        },
       ];
 
       const edges = [
@@ -611,6 +784,9 @@
             roam: true,
             label: {
               show: true,
+              fontSize: 12,
+              fontFamily: "Arial",
+              position: "bottom", // 设置标签位置为底部
             },
             force: {
               repulsion: 200,
@@ -678,6 +854,18 @@
       sheep3.addEventListener("click", () => {
         sheepText.src = "./assets1/16/t3.png";
       });
+    </script>
+    <script>
+      // 显示内容的函数
+      const body = document.getElementsByTagName('body')[0]
+      body.style.overflow = "hidden"
+      function showContent() {
+        body.style.overflow = "auto"
+        var coverVideoContainer = document.getElementById(
+          "cover-video-container"
+        );
+        coverVideoContainer.style.display = "none"; // 隐藏视频容器
+      }
     </script>
   </body>
 </html>
